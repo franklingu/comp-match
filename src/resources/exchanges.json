@@ -1,0 +1,604 @@
+{
+  "exchanges": [
+    {
+      "country": "Botswana",
+      "exchange": "Botswana Stock Exchange",
+      "google_exch": "BOT",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Ghana",
+      "exchange": "Ghana Stock Exchange",
+      "google_exch": "GHA",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Kenya",
+      "exchange": "Nairobi Stock Exchange",
+      "google_exch": "NBO",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Malawi",
+      "exchange": "Malawi Stock Exchange",
+      "google_exch": "MAL",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Morocco",
+      "exchange": "Casablanca Stock Exchange",
+      "google_exch": "CAS",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Nigeria",
+      "exchange": "Nigerian Stock Exchange",
+      "google_exch": "NIG",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "South Africa",
+      "exchange": "JSE Securities Exchange",
+      "google_exch": "JNB",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Zambia",
+      "exchange": "Lusaka Stock Exchange",
+      "google_exch": "LUS",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Zimbabwe",
+      "exchange": "Zimbabwe Stock Exchange",
+      "google_exch": "ZIM",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Australia",
+      "exchange": "Australian Securities Exchange",
+      "google_exch": "ASX",
+      "yahoo_exch": ".AX"
+    },
+    {
+      "country": "Bangladesh",
+      "exchange": "Dhaka Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "China",
+      "exchange": "Hong Kong Stock Exchange",
+      "google_exch": "HKG",
+      "yahoo_exch": ".HK"
+    },
+    {
+      "country": "China",
+      "exchange": "Shanghai Stock Exchange",
+      "google_exch": "SHA",
+      "yahoo_exch": ".SS"
+    },
+    {
+      "country": "China",
+      "exchange": "Shenzhen Stock Exchange",
+      "google_exch": "SHE",
+      "yahoo_exch": ".SZ"
+    },
+    {
+      "country": "India",
+      "exchange": "National Stock Exchange of India",
+      "google_exch": "NSE",
+      "yahoo_exch": ".NS"
+    },
+    {
+      "country": "India",
+      "exchange": "Bombay Stock Exchange",
+      "google_exch": "BSE",
+      "yahoo_exch": ".BO"
+    },
+    {
+      "country": "Indonesia",
+      "exchange": "Indonesia Stock Exchange",
+      "google_exch": "JAK",
+      "yahoo_exch": ".JK"
+    },
+    {
+      "country": "Japan",
+      "exchange": "Fukuoka Stock Exchange",
+      "google_exch": "FUK",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Japan",
+      "exchange": "Hercules Stock Exchange",
+      "google_exch": "NJM",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Japan",
+      "exchange": "JASDAQ Securities Exchange",
+      "google_exch": "JSD",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Japan",
+      "exchange": "Nagoya Stock Exchange",
+      "google_exch": "NAG",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Japan",
+      "exchange": "Osaka Securities Exchange",
+      "google_exch": "OSA",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Japan",
+      "exchange": "Sapporo Securities Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Japan",
+      "exchange": "Tokyo Stock Exchange",
+      "google_exch": "TYO",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Korea, Republic of",
+      "exchange": "Korea Exchange",
+      "google_exch": "KRX",
+      "yahoo_exch": ".KS"
+    },
+    {
+      "country": "Korea, Republic of",
+      "exchange": "KOSDAQ",
+      "google_exch": "KDQ",
+      "yahoo_exch": ".KQ"
+    },
+    {
+      "country": "Malaysia",
+      "exchange": "Malaysia Exchange",
+      "google_exch": "KUL",
+      "yahoo_exch": ".KL"
+    },
+    {
+      "country": "New Zealand",
+      "exchange": "New Zealand Exchange",
+      "google_exch": "NZE",
+      "yahoo_exch": ".NZ"
+    },
+    {
+      "country": "Pakistan",
+      "exchange": "Karachi Stock Exchange",
+      "google_exch": "KAR",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Pakistan",
+      "exchange": "Lahore Stock Exchange",
+      "google_exch": "Lah",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Philippines",
+      "exchange": "Philippine Stock Exchange",
+      "google_exch": "PSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Singapore",
+      "exchange": "Singapore Exchange",
+      "google_exch": "SIN",
+      "yahoo_exch": ".SI"
+    },
+    {
+      "country": "Sri Lanka",
+      "exchange": "Colombo Stock Exchange",
+      "google_exch": "COL",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Taiwan",
+      "exchange": "GreTai Securities Market",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Taiwan",
+      "exchange": "Taiwan Stock Exchange",
+      "google_exch": "TPE",
+      "yahoo_exch": ".TW"
+    },
+    {
+      "country": "Thailand",
+      "exchange": "Stock Exchange of Thailand",
+      "google_exch": "BAK",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Vietnam",
+      "exchange": "Ho Chi Minh Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Austria",
+      "exchange": "Vienna Stock Exchange",
+      "google_exch": "WBAG",
+      "yahoo_exch": ".VI"
+    },
+    {
+      "country": "Belgium",
+      "exchange": "Euronext - Brussels",
+      "google_exch": "EBR",
+      "yahoo_exch": ".BR"
+    },
+    {
+      "country": "Bulgaria",
+      "exchange": "Bulgarian Stock Exchange",
+      "google_exch": "BUL",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Croatia",
+      "exchange": "Zagreb Stock Exchange",
+      "google_exch": "ZSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Cyprus",
+      "exchange": "Cyprus Stock Exchange",
+      "google_exch": "CSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Czech Republic",
+      "exchange": "Prague Stock Exchange",
+      "google_exch": "PRG",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Denmark",
+      "exchange": "OMX Nordic Exchange - Copenhagen",
+      "google_exch": "CPH",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Denmark",
+      "exchange": "GXG Markets",
+      "google_exch": "AMP",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Estonia",
+      "exchange": "OMX Baltic Exchange - Tallinn",
+      "google_exch": "TAL",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Finland",
+      "exchange": "OMX Nordic Exchange - Helsinki",
+      "google_exch": "HEL",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "France",
+      "exchange": "Euronext - Paris",
+      "google_exch": "EPA",
+      "yahoo_exch": ".PA"
+    },
+    {
+      "country": "Germany",
+      "exchange": "Berlin Stock Exchange",
+      "google_exch": "BER",
+      "yahoo_exch": ".BE"
+    },
+    {
+      "country": "Germany",
+      "exchange": "XETRA",
+      "google_exch": "ETR",
+      "yahoo_exch": ".DE"
+    },
+    {
+      "country": "Germany",
+      "exchange": "Dusseldorf Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Germany",
+      "exchange": "Frankfurt Stock Exchange",
+      "google_exch": "FRA",
+      "yahoo_exch": ".F"
+    },
+    {
+      "country": "Germany",
+      "exchange": "Munich Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Germany",
+      "exchange": "Stuttgart Stock Exchange",
+      "google_exch": "STU",
+      "yahoo_exch": ".SG"
+    },
+    {
+      "country": "Greece",
+      "exchange": "Athens Exchange",
+      "google_exch": "ATH",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Hungary",
+      "exchange": "Budapest Stock Exchange",
+      "google_exch": "BDP",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Ireland",
+      "exchange": "Irish Stock Exchange",
+      "google_exch": "ISE",
+      "yahoo_exch": ".IR"
+    },
+    {
+      "country": "Italy",
+      "exchange": "Borsa Italiana",
+      "google_exch": "BIT",
+      "yahoo_exch": ".MI"
+    },
+    {
+      "country": "Latvia",
+      "exchange": "OMX Baltic Exchange - Riga",
+      "google_exch": "RSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Lithuania",
+      "exchange": "OMX Baltic Exchange - Vilnius",
+      "google_exch": "VSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Luxembourg",
+      "exchange": "Luxembourg Stock Exchange",
+      "google_exch": "LUX",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Macedonia",
+      "exchange": "Macedonian Stock Exchange",
+      "google_exch": "MSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Netherlands",
+      "exchange": "Euronext - Amsterdam",
+      "google_exch": "AMS",
+      "yahoo_exch": ".AS"
+    },
+    {
+      "country": "Norway",
+      "exchange": "Oslo Stock Exchange",
+      "google_exch": "OSL",
+      "yahoo_exch": ".OL"
+    },
+    {
+      "country": "Poland",
+      "exchange": "Warsaw Stock Exchange",
+      "google_exch": "WAR",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Portugal",
+      "exchange": "Euronext - Lisbon",
+      "google_exch": "ELI",
+      "yahoo_exch": ".LS"
+    },
+    {
+      "country": "Romania",
+      "exchange": "Bucharest Stock Exchange",
+      "google_exch": "BSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Romania",
+      "exchange": "Sibex-Sibiu Stock Exchange",
+      "google_exch": "SBX",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Russia",
+      "exchange": "Russian Trading System",
+      "google_exch": "RTC",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Russia",
+      "exchange": "Moscow Interbank Currency Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Slovakia",
+      "exchange": "Bratislava Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Slovenia",
+      "exchange": "Ljubljana Stock Exchange",
+      "google_exch": "LJE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Spain",
+      "exchange": "Barcelona Stock Exchange",
+      "google_exch": "BCN",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Spain",
+      "exchange": "Madrid Stock Exchange",
+      "google_exch": "MCE",
+      "yahoo_exch": ".MA"
+    },
+    {
+      "country": "Sweden",
+      "exchange": "OMX Nordic Exchange - Stockholm",
+      "google_exch": "STO",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Switzerland",
+      "exchange": "Berne eXchange",
+      "google_exch": "BRN",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Switzerland",
+      "exchange": "SIX Swiss Exchange",
+      "google_exch": "SWX",
+      "yahoo_exch": ".VX"
+    },
+    {
+      "country": "Turkey",
+      "exchange": "Istanbul Stock Exchange",
+      "google_exch": "IST",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "United Kingdom",
+      "exchange": "London Stock Exchange",
+      "google_exch": "LON",
+      "yahoo_exch": ".L"
+    },
+    {
+      "country": "United Kingdom",
+      "exchange": "PLUS Markets Group",
+      "google_exch": "OFEX",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Bahrain",
+      "exchange": "Bahrain Stock Exchange",
+      "google_exch": "BSH",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Egypt",
+      "exchange": "Egyptian Stock Exchange",
+      "google_exch": "CAI",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Egypt",
+      "exchange": "Cairo & Alexandria Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Israel",
+      "exchange": "Tel Aviv Stock Exchange",
+      "google_exch": "TLV",
+      "yahoo_exch": ".TA"
+    },
+    {
+      "country": "Jordan",
+      "exchange": "Amman Stock Exchange",
+      "google_exch": "AFM",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Lebanon",
+      "exchange": "Beirut Stock Exchange",
+      "google_exch": "BEY",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Palestine",
+      "exchange": "Palestine Securities Exchange",
+      "google_exch": "PAS",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "United Arab Emirates",
+      "exchange": "NASDAQ Dubai",
+      "google_exch": "DFM",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Syria",
+      "exchange": "Damascus Securities Exchange",
+      "google_exch": "DSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Bermuda",
+      "exchange": "Bermuda Stock Exchange",
+      "google_exch": "BSX",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Canada",
+      "exchange": "Canada National Stock Exchange",
+      "google_exch": "CNQ",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Canada",
+      "exchange": "Toronto Stock Exchange",
+      "google_exch": "TSE",
+      "yahoo_exch": ".TO"
+    },
+    {
+      "country": "Canada",
+      "exchange": "TSX Venture Exchange",
+      "google_exch": "CVE",
+      "yahoo_exch": ".V"
+    },
+    {
+      "country": "United States",
+      "exchange": "American Stock Exchange",
+      "google_exch": "AMEX",
+      "yahoo_exch": "AMEX"
+    },
+    {
+      "country": "United States",
+      "exchange": "NASDAQ OMX BX",
+      "google_exch": "NASDAQ",
+      "yahoo_exch": "NASDAQ"
+    },
+    {
+      "country": "United States",
+      "exchange": "Chicago Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "United States",
+      "exchange": "NASDAQ",
+      "google_exch": "NASDAQ",
+      "yahoo_exch": "NASDAQ"
+    },
+    {
+      "country": "United States",
+      "exchange": "National Stock Exchange",
+      "google_exch": "",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "United States",
+      "exchange": "New York Stock Exchange",
+      "google_exch": "NYSE",
+      "yahoo_exch": "NYSE"
+    },
+    {
+      "country": "United States",
+      "exchange": "NASDAQ OMX PHLX",
+      "google_exch": "NASDAQ",
+      "yahoo_exch": "NASDAQ"
+    }
+  ]
+}
