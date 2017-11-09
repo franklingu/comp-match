@@ -65,7 +65,7 @@ class CompanyUnderline(object):
     def setup_country(self):
         """Set country based on known information
         """
-        if not hasattr(self, 'exchange') and self.exchange is None:
+        if not hasattr(self, 'exchange') or self.exchange is None:
             return
         exch_country = find_country_for_exchange(self.exchange)
         if hasattr(self, 'country') and self.country:
