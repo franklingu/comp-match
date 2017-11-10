@@ -4,7 +4,6 @@ import random
 import time
 
 import requests
-from lxml import html as HTMLParser
 
 from .base import BaseNameMatcher, CompanyUnderline
 from ._utils import get_logger

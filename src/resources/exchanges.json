@@ -225,7 +225,7 @@
     {
       "country": "Austria",
       "exchange": "Vienna Stock Exchange",
-      "google_exch": "WBAG",
+      "google_exch": "VIE",
       "yahoo_exch": ".VI"
     },
     {
@@ -463,6 +463,12 @@
       "yahoo_exch": ".VX"
     },
     {
+      "country": "Switzerland",
+      "exchange": "Swiss Europe",
+      "google_exch": "VTX",
+      "yahoo_exch": ".VX"
+    },
+    {
       "country": "Turkey",
       "exchange": "Istanbul Stock Exchange",
       "google_exch": "IST",
@@ -561,14 +567,14 @@
     {
       "country": "United States",
       "exchange": "American Stock Exchange",
-      "google_exch": "AMEX",
-      "yahoo_exch": "AMEX"
+      "google_exch": "NYSEAMEX",
+      "yahoo_exch": ""
     },
     {
       "country": "United States",
       "exchange": "NASDAQ OMX BX",
       "google_exch": "NASDAQ",
-      "yahoo_exch": "NASDAQ"
+      "yahoo_exch": ""
     },
     {
       "country": "United States",
@@ -580,7 +586,7 @@
       "country": "United States",
       "exchange": "NASDAQ",
       "google_exch": "NASDAQ",
-      "yahoo_exch": "NASDAQ"
+      "yahoo_exch": ""
     },
     {
       "country": "United States",
@@ -592,13 +598,19 @@
       "country": "United States",
       "exchange": "New York Stock Exchange",
       "google_exch": "NYSE",
-      "yahoo_exch": "NYSE"
+      "yahoo_exch": ""
+    },
+    {
+      "country": "United States",
+      "exchange": "NYSE Arca Stock Exchange",
+      "google_exch": "NYSEARCA",
+      "yahoo_exch": ""
     },
     {
       "country": "United States",
       "exchange": "NASDAQ OMX PHLX",
       "google_exch": "NASDAQ",
-      "yahoo_exch": "NASDAQ"
+      "yahoo_exch": ""
     }
   ]
 }
