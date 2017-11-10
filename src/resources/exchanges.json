@@ -39,7 +39,7 @@
     {
       "country": "South Africa",
       "exchange": "JSE Securities Exchange",
-      "google_exch": "JNB",
+      "google_exch": "JSE",
       "yahoo_exch": ""
     },
     {
@@ -93,7 +93,7 @@
     {
       "country": "India",
       "exchange": "Bombay Stock Exchange",
-      "google_exch": "BSE",
+      "google_exch": "BOM",
       "yahoo_exch": ".BO"
     },
     {
@@ -189,9 +189,15 @@
     {
       "country": "Singapore",
       "exchange": "Singapore Exchange",
-      "google_exch": "SIN",
+      "google_exch": "SGX",
       "yahoo_exch": ".SI"
     },
+    {
+      "country": "Saudi Arabia",
+      "exchange": "Saudi Stock Exchange",
+      "google_exch": "TADAWUL",
+      "yahoo_exch": ""
+    }
     {
       "country": "Sri Lanka",
       "exchange": "Colombo Stock Exchange",
@@ -213,7 +219,7 @@
     {
       "country": "Thailand",
       "exchange": "Stock Exchange of Thailand",
-      "google_exch": "BAK",
+      "google_exch": "BKK",
       "yahoo_exch": ""
     },
     {
@@ -343,6 +349,12 @@
       "yahoo_exch": ".IR"
     },
     {
+      "country": "Iceland",
+      "exchange": "NASDAQ OMX Iceland",
+      "google_exch": "ICE",
+      "yahoo_exch": "",
+    },
+    {
       "country": "Italy",
       "exchange": "Borsa Italiana",
       "google_exch": "BIT",
@@ -421,6 +433,18 @@
       "yahoo_exch": ""
     },
     {
+      "country": "Poland",
+      "exchange": "Warsaw Stock Exchange",
+      "google_exch": "WSE",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Russia",
+      "exchange": "Moscow Exchange",
+      "google_exch": "MCX",
+      "yahoo_exch": ""
+    },
+    {
       "country": "Slovakia",
       "exchange": "Bratislava Stock Exchange",
       "google_exch": "",
@@ -436,6 +460,12 @@
       "country": "Spain",
       "exchange": "Barcelona Stock Exchange",
       "google_exch": "BCN",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Spain",
+      "exchange": "Spanish Stock Exchange",
+      "google_exch": "BME",
       "yahoo_exch": ""
     },
     {
@@ -549,7 +579,7 @@
     {
       "country": "Canada",
       "exchange": "Canada National Stock Exchange",
-      "google_exch": "CNQ",
+      "google_exch": "CNSX",
       "yahoo_exch": ""
     },
     {
@@ -568,6 +598,12 @@
       "country": "United States",
       "exchange": "American Stock Exchange",
       "google_exch": "NYSEAMEX",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "United States",
+      "exchange": "NYSE Markets",
+      "google_exch": "NYSEMKT",
       "yahoo_exch": ""
     },
     {
@@ -610,6 +646,18 @@
       "country": "United States",
       "exchange": "NASDAQ OMX PHLX",
       "google_exch": "NASDAQ",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Argentina",
+      "exchange": "Buenos Aires Stock Exchange",
+      "google_exch": "BCBA",
+      "yahoo_exch": ""
+    },
+    {
+      "country": "Brazil",
+      "exchange": "Bovespa Stock Exchange",
+      "google_exch": "BVMF",
       "yahoo_exch": ""
     }
   ]

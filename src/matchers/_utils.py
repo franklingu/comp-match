@@ -143,10 +143,9 @@ def get_exchanges_from_remote(retry=5):
             'Chrome/52.0.2743.116 Safari/537.36'
         )
     }
-    retry_num = 0
     query_sel = '//table//td/b[contains(text(), "Google Finance")]/../../..'
     data = []
-    while retry_num < retry:
+    for retry_num in range(retry):
         try:
             res = requests.get(link, headers=headers)
             parsed = HTMLParser.fromstring(res.content)
@@ -181,4 +180,43 @@ def get_exchanges_from_remote(retry=5):
             if retry_num == retry - 1:
                 raise
             time.sleep(random.random() * 5)
+    return data
+
+
+def get_google_finance_exchanges():
+    try:
+        from selenium import webdriver
+    except ImportError:
+        print('selenium is required')
+        return None
+    driver = None
+    try:
+        driver = webdriver.Firefox()
+        driver.get('https://finance.google.com')
+        # click stock screen item
+        driver.find_elements_by_css_selector('#navmenu > li')[-2].click()
+        time.sleep(3)
+        data = {}
+        # iterate by countries now
+        country_elems = driver.find_elements_by_css_selector(
+            '.id-regionselect option'
+        )
+        for country_elem in country_elems:
+            country_code = country_elem.get_attribute('value').upper()
+            country_name = country_elem.text
+            country_elem.click()
+            exch_elems = driver.find_elements_by_css_selector(
+                '#exchangeselect option'
+            )
+            for exch_elem in exch_elems:
+                google_exch = exch_elem.get_attribute('value')
+                # ignore empty or allexchanges options
+                if google_exch is None or google_exch == 'AllExchanges':
+                    continue
+                fullname = exch_elem.text
+                fullname = fullname[:fullname.index('(')].strip()
+                data[google_exch] = (fullname, country_name, country_code)
+    except Exception:
+        if driver is not None:
+            driver.quit()
     return data
