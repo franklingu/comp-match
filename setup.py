@@ -1,20 +1,16 @@
 #!/usr/bin/env python
 from __future__ import absolute_import, print_function
 
-import sys
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup, find_packages
 
-from src import matchers
+import matchers
 
 NAME = 'comp-match'
-PACKAGES = [
-    'matchers',
-]
+PACKAGES = find_packages(
+    exclude=['*.tests', '*.tests.*', 'tests.*', 'tests']
+)
 PACKAGE_DATA = {
-    'matchers': ['resources/*.json']
+    'matchers': ['resources/*.*']
 }
 AUTHOR = matchers.__author__
 AUTHOR_EMAIL = matchers.__author_email__
@@ -40,7 +36,6 @@ setup(
     url=URL,
     keywords=KEYWORDS,
     license='MIT',
-    package_dir={'': 'src'},
     packages=PACKAGES,
     package_data=PACKAGE_DATA,
     include_package_data=True,

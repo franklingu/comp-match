@@ -11,7 +11,7 @@ Given a company name, how to find its underline/stock symbol? By hand this does 
 ### Notes
 
 1. Information is gathered from web and inaccuracy is inevitable. In particularly Google Finance and Yahoo Finance exchange mapping relies on some third party website and therefore may not be 100% correct. I am still trying to verify those information.
-2. Tickers do change and currently there is not support for mapping over histry yet.
+2. Tickers do change and currently there is not support for mapping over history yet.
 
 ### LICENSE
 
