@@ -1,8 +1,11 @@
 # comp-match
 
+[![Build Status](https://travis-ci.org/franklingu/comp-match.svg?branch=master)](https://travis-ci.org/franklingu/comp-match)&nbsp;
+[![Documentation Status](https://readthedocs.org/projects/comp-match/badge/?version=latest)](http://comp-match.readthedocs.io/en/latest/?badge=latest)
+
 A package that helps to compare company names, match company names to legal names and stock symbols and many more.
 
-\[WIP\]
+***\[WIP\]***
 
 ### Introduction
 

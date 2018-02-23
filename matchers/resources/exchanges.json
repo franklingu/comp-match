@@ -197,7 +197,7 @@
       "exchange": "Saudi Stock Exchange",
       "google_exch": "TADAWUL",
       "yahoo_exch": ""
-    }
+    },
     {
       "country": "Sri Lanka",
       "exchange": "Colombo Stock Exchange",
@@ -352,7 +352,7 @@
       "country": "Iceland",
       "exchange": "NASDAQ OMX Iceland",
       "google_exch": "ICE",
-      "yahoo_exch": "",
+      "yahoo_exch": ""
     },
     {
       "country": "Italy",

@@ -25,13 +25,13 @@ class ResourceManager(object):
         super(ResourceManager, self).__init__()
         dirpath = os.path.dirname(os.path.abspath(__file__))
         if exchange_path is None:
-            exchange_path = os.path.join(
-                dirpath, '../resources/exchanges.json'
-            )
+            exchange_path = os.path.normpath(os.path.join(
+                dirpath, './resources/exchanges.json'
+            ))
         if country_path is None:
-            country_path = os.path.join(
-                dirpath, '../resources/iso_countries.json'
-            )
+            country_path = os.path.normpath(os.path.join(
+                dirpath, './resources/iso_countries.json'
+            ))
         self.exchange_path = exchange_path
         self.country_path = country_path
         with open(self.exchange_path, 'r') as ifile:
