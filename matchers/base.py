@@ -1,20 +1,27 @@
 """Base classes for matchers
 """
+from abc import ABCMeta
+
 from ._utils import (
     find_google_exchange, find_yahoo_exchange, find_country_for_exchange,
     find_country_repr,
 )
 
 
-class BaseNameMatcher(object):
+class BaseNameMatcher(  # pylint: disable=too-few-public-methods
+        object, metaclass=ABCMeta):
     """Base for name matcher"""
     def __init__(self, *args, **kwargs):
+        """
+
+        TODO: add cache
+        """
         super(BaseNameMatcher, self).__init__()
         self.args = args
         self.kwargs = kwargs
 
-    def match_by(self, names):
-        """Match by name
+    def match_by(self, names, **kwargs):
+        """Match by names
 
         Params:
             names: a company name or a list of company names
@@ -27,7 +34,7 @@ class BaseNameMatcher(object):
 
 class CompanyUnderline(object):
     """Representation of a company underline"""
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         super(CompanyUnderline, self).__init__()
         strict_validate = False
         if 'strict_validate' in kwargs:
@@ -36,6 +43,8 @@ class CompanyUnderline(object):
             self.ticker = kwargs.pop('ticker')
         if 'exchange' in kwargs:
             self.exchange = kwargs.pop('exchange')
+        if 'mic' in kwargs:
+            self.mic = kwargs.pop('mic')
         if 'google_exch' in kwargs:
             self.google_exch = kwargs.pop('google_exch')
         if 'yahoo_exch' in kwargs:
@@ -57,10 +66,11 @@ class CompanyUnderline(object):
             return
         if hasattr(self, 'google_exch'):
             self.exchange = find_google_exchange(self.google_exch)
-            return
         if hasattr(self, 'yahoo_exch'):
             self.exchange = find_yahoo_exchange(self.yahoo_exch)
-            return
+        if hasattr(self, 'mic'):
+            # TODO: add mic mapping
+            self.exchange = ''
 
     def setup_country(self):
         """Set country based on known information
