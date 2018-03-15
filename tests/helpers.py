@@ -1,6 +1,7 @@
 """Helper for test
 """
 import os
+import json
 
 
 class MockedResponse(object):
@@ -33,3 +34,7 @@ class MockedResponse(object):
                 return ifile.read()
         else:
             raise self.raises('Mocked exception')
+
+    def json(self):
+        content = self.content
+        return json.loads(content.decode('utf-8'))

@@ -15,26 +15,6 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
     def __init__(self):
         super(GoogleFinanceNameMatcher, self).__init__()
         self.base_url = 'https://finance.google.com/finance'
-        self.ua_reprs = [
-            (
-                'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0)'
-                ' Gecko/20100101 Firefox/46.0'
-            ),
-            (
-                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'
-                ' (KHTML, like Gecko) Ubuntu Chromium/37.0.2062.120'
-                ' Chrome/37.0.2062.120 Safari/537.36'
-            ),
-        ]
-
-    def _get_headers(self):
-        ua = self.ua_reprs[random.randint(0, len(self.ua_reprs) - 1)]
-        acc = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-        return {
-            'User-Agent': ua,
-            'Accept': acc,
-            'Accept-Language': 'en-US,en;q=0.5',
-        }
 
     def _parse_google_finance_response(self, page_content):
         symbols = []

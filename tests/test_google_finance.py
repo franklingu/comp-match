@@ -1,6 +1,6 @@
 from unittest.mock import patch
 
-from matchers.google_finance import GoogleFinanceNameMatcher
+from comp_match.google_finance import GoogleFinanceNameMatcher
 from .helpers import MockedResponse
 
 

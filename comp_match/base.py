@@ -1,6 +1,7 @@
 """Base classes for matchers
 """
 from abc import ABCMeta
+import random
 
 from ._utils import (
     find_google_exchange, find_yahoo_exchange, find_country_for_exchange,
@@ -19,6 +20,27 @@ class BaseNameMatcher(  # pylint: disable=too-few-public-methods
         super(BaseNameMatcher, self).__init__()
         self.args = args
         self.kwargs = kwargs
+        self.ua_reprs = [
+            (
+                'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0)'
+                ' Gecko/20100101 Firefox/46.0'
+            ),
+            (
+                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'
+                ' (KHTML, like Gecko) Ubuntu Chromium/37.0.2062.120'
+                ' Chrome/37.0.2062.120 Safari/537.36'
+            ),
+        ]
+
+    def _get_headers(self):
+        ua = self.ua_reprs[random.randint(0, len(self.ua_reprs) - 1)]
+        acc = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+        return {
+            'User-Agent': ua,
+            'Accept': acc,
+            'Accept-Language': 'en-US,en;q=0.5',
+        }
+
 
     def match_by(self, names, **kwargs):
         """Match by names
@@ -46,17 +68,17 @@ class CompanyUnderline(object):
         strict_validate = False
         if 'strict_validate' in kwargs:
             strict_validate = kwargs.pop('strict_validate')
-        if 'ticker' in kwargs:
+        if kwargs.get('ticker'):
             self.ticker = kwargs.pop('ticker')
-        if 'exchange' in kwargs:
+        if kwargs.get('exchange'):
             self.exchange = kwargs.pop('exchange')
-        if 'mic' in kwargs:
+        if kwargs.get('mic'):
             self.mic = kwargs.pop('mic')
-        if 'google_exch' in kwargs:
+        if kwargs.get('google_exch'):
             self.google_exch = kwargs.pop('google_exch')
-        if 'yahoo_exch' in kwargs:
+        if kwargs.get('yahoo_exch'):
             self.yahoo_exch = kwargs.pop('yahoo_exch')
-        if 'country' in kwargs:
+        if kwargs.get('country'):
             self.country = kwargs.pop('country')
         self.setup_exchange()
         self.setup_country()
