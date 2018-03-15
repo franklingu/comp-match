@@ -88,27 +88,13 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
                     time.sleep(random.random() * sleep + retry_num * sleep)
         return symbols
 
-    def match_by(self, names, **kwargs):
-        """Match by name via Google Finance
-
-        Params:
-            names: a company name or a list of company names
-            retry: number of retries if failure happens
-            sleep: default number of seconds to sleep
-
-        Returns:
-            dict of  orig_name: list of \
-            (mapped legal name, underline, addon info dict)
-        """
-        if not isinstance(names, (set, list, tuple)):
-            names = [names]
+    def _match_by(self, names, **kwargs):
         ret = {}
-        names = set(names)
         retry = kwargs.pop('retry', 5)
         sleep = kwargs.pop('sleep', 30)
         for name in names:
             symbols = self._find_stock_for_name(
-                name, retry=retry, sleep=sleep
+                name, retry=retry, sleep=sleep,
             )
             ret[name] = []
             for symbol in symbols:

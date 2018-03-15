@@ -7,3 +7,4 @@ lxml~=4.2.0
 cssselect~=1.0.3
 pytest
 pytest>=3.4.2
+pytest-cov>=2.5.1

@@ -27,9 +27,16 @@ class BaseNameMatcher(  # pylint: disable=too-few-public-methods
             names: a company name or a list of company names
 
         Returns:
-            dict of  orig_name: (mapped legal name, underline, addon info dict)
+            dict of  orig_name: list of \
+            mapped legal name, underline, addon info dict)
         """
-        raise NotImplementedError('To be completed ...')
+        if isinstance(names, str):
+            names = [names]
+        names = set(names)
+        return self._match_by(names, **kwargs)
+
+    def _match_by(self, names, **kwargs):
+        raise NotImplementedError('To be implemented')
 
 
 class CompanyUnderline(object):
