@@ -4,8 +4,8 @@ from abc import ABCMeta
 import random
 
 from ._utils import (
-    find_google_exchange, find_yahoo_exchange, find_country_for_exchange,
-    find_country_repr,
+    find_google_exchange, find_yahoo_exchange, find_mic_exchange,
+    find_country_for_exchange, find_country_repr,
 )
 
 
@@ -98,8 +98,7 @@ class CompanyUnderline(object):
         if hasattr(self, 'yahoo_exch'):
             self.exchange = find_yahoo_exchange(self.yahoo_exch)
         if hasattr(self, 'mic'):
-            # TODO: add mic mapping
-            self.exchange = ''
+            self.exchange = find_mic_exchange(self.mic)
 
     def setup_country(self):
         """Set country based on known information

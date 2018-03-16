@@ -1,16 +1,20 @@
 """match company names to tickers
 """
+import random
+import time
+
 import requests
 from lxml import etree
 
-from .._common import _get_internal_logger
+from ._utils import get_logger
 from .base import BaseNameMatcher, CompanyUnderline
 
 
-class OpenCalaisNameMatcher(BaseNameMatcher):
+class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
+        BaseNameMatcher):
     """Match company names to underlines via OpenCalais
     """
-    def __init__(self, access_token=None, *args, **kwargs):
+    def __init__(self, access_token=None):
         super(OpenCalaisNameMatcher, self).__init__()
         if access_token is None:
             access_token = '2Uqpdme4VlbUp46wQYxGJoGcw1GpPFpW'
@@ -23,24 +27,25 @@ class OpenCalaisNameMatcher(BaseNameMatcher):
             'outputformat': 'xml/rdf'
         }
 
-    def _match_raw_names(self, names, retry=5, *args, **kwargs):
-        if isinstance(names, str):
-            names = [names]
-        names = list(set(names))
+    def _match_by(self, names, **kwargs):
+        retry = kwargs.pop('retry', 5)
+        sleep = kwargs.pop('sleep', 30)
         end, curr, step = len(names), 0, 50
         ret = {}
         while curr < end:
             range_end = curr + step if curr + step < end else end
             curr_names = names[curr:range_end]
-            match_res = self._match_for_names(curr_names, retry=retry)
+            match_res = self._match_for_names(
+                curr_names, retry=retry, sleep=sleep
+            )
             if match_res:
                 ret.update(match_res)
             curr = range_end
         return ret
 
-    def _match_for_names(self, curr_names, retry=5):
+    def _match_for_names(self, names, retry=5, sleep=30):
         content = ''.join(
-            ('{} is a public company\r\n').format(name) for name in curr_names
+            ('{} is a public company\r\n').format(name) for name in names
         ).encode('utf-8')
         link = 'https://api.thomsonreuters.com/permid/calais'
         for retry_num in range(retry):
@@ -50,17 +55,25 @@ class OpenCalaisNameMatcher(BaseNameMatcher):
                 )
                 res_content = res.content
                 break
-            except Exception as err:
-                _get_internal_logger().error(
+            except Exception as err:  # pylint: disable=broad-except
+                get_logger().debug(
                     'Exception during requesting opencalais: %s', str(err)
                 )
                 if retry_num == retry - 1:
-                    raise
-        match, parent_match = self._process_rdf_response(res_content)
+                    pass
+                else:
+                    time.sleep(random.random() * sleep + sleep * retry_num)
+        raw_matches = self._process_rdf_response(res_content)
         ret_data = {}
-        for name in curr_names:
-            if name in self._cache:
-                ret_data[name] = self._cache[name]
+        for name, raw_match in raw_matches.items():
+            orig_name, legal_name, ric, ticker, permid, score = raw_match
+            ret_data[orig_name] = [(
+                legal_name,
+                self._match_to_underline(
+                    ticker, permid, retry=retry, sleep=sleep
+                ),
+                {'score': score, 'ric': ric}
+            )]
         return ret_data
 
     def _process_rdf_response(self, res_content):
@@ -87,7 +100,7 @@ class OpenCalaisNameMatcher(BaseNameMatcher):
             rtype = desc.xpath(
                 './rdf:type/@rdf:resource', namespaces=rdf.nsmap
             )
-            if len(subjs) == 0:
+            if not subjs:
                 continue
             else:
                 # take only the first subject
@@ -117,22 +130,31 @@ class OpenCalaisNameMatcher(BaseNameMatcher):
             if not raw_elem:
                 continue
             match_top[raw_elem['./c:exact']] = row
-        for name in match_top:
-            raw_match_rec = match_top[name]
-            orig_name, legal_name, ric, ticker, permid, score = raw_match_rec
-            underline = CompanyUnderline(
-                ticker=ticker, ric=ric, permid=permid
-            )
-            self._cache[orig_name] = (
-                legal_name, underline, {'score': score, 'top': True}
-            )
-        for name in match:
-            raw_match_rec = match[name]
-            orig_name, legal_name, ric, ticker, permid, score = raw_match_rec
-            underline = CompanyUnderline(
-                ticker=ticker, ric=ric, permid=permid
-            )
-            self._cache[orig_name] = (
-                legal_name, underline, {'score': score}
-            )
-        return match, match_top
+        ret = {}
+        ret.update(match_top)
+        ret.update(match)
+        return ret
+
+    def _match_to_underline(self, ticker, permid, retry=5, sleep=30):
+        link = 'https://permid.org/api/mdaas/getEntityById/{}'.format(permid)
+        headers = self._get_headers()
+        del headers['Content-Type']
+        del headers['outputformat']
+        for retry_num in range(retry):
+            try:
+                res = requests.post(
+                    link, headers=headers, timeout=80
+                )
+                res_obj = res.json()
+                for quote in res_obj['mainQuoteId.mdaas']:
+                    mic = quote.get('Primary Mic', [''])[0]
+                    underline = CompanyUnderline(ticker=ticker, mic=mic)
+                    return underline
+            except Exception as err:  # pylint: disable=broad-except
+                get_logger().debug(
+                    'Exception during requesting opencalais: %s', str(err)
+                )
+                if retry_num == retry - 1:
+                    pass
+                else:
+                    time.sleep(random.random() * sleep + sleep * retry_num)

@@ -1,16 +1,13 @@
 """Collection of util functions
 """
 import os
+import csv
 import logging
 import time
-import random
 try:
     import simplejson as json
 except ImportError:
     import json
-
-import requests
-from lxml import html as HTMLParser
 
 
 __all__ = [
@@ -26,7 +23,7 @@ class ResourceManager(object):
         dirpath = os.path.dirname(os.path.abspath(__file__))
         if exchange_path is None:
             exchange_path = os.path.normpath(os.path.join(
-                dirpath, './resources/exchanges.json'
+                dirpath, './resources/exchanges.csv'
             ))
         if country_path is None:
             country_path = os.path.normpath(os.path.join(
@@ -35,19 +32,25 @@ class ResourceManager(object):
         self.exchange_path = exchange_path
         self.country_path = country_path
         with open(self.exchange_path, 'r') as ifile:
-            raw_exchanges = json.load(ifile)['exchanges']
-            exchanges = {}
-            google_exches = {}
-            yahoo_exches = {}
-            for exch in raw_exchanges:
-                exchanges[exch['exchange']] = exch
-                if exch.get('google_exch'):
-                    google_exches[exch['google_exch']] = exch
-                if exch.get('yahoo_exch'):
-                    yahoo_exches[exch['yahoo_exch']] = exch
+            reader = csv.reader(ifile, delimiter='|')
+            exchanges, google_exches, yahoo_exches, mics = {}, {}, {}, {}
+            headers = None
+            for row in reader:
+                if headers is None:
+                    headers = row
+                    continue
+                rec = dict(zip(headers, row))
+                exchanges[rec['Exchange Name']] = rec
+                if rec.get('Google Exchange'):
+                    google_exches[rec['Google Exchange']] = rec
+                if rec.get('Yahoo Exchange'):
+                    yahoo_exches[rec['Yahoo Exchange']] = rec
+                if rec.get('MIC'):
+                    mics[rec['MIC']] = rec
             self.exchanges = exchanges
             self.google_exches = google_exches
             self.yahoo_exches = yahoo_exches
+            self.mics = mics
         with open(self.country_path, 'r') as ifile:
             raw_countries = json.load(ifile)['3166-1']
             countries = {}
@@ -84,7 +87,7 @@ def find_google_exchange(google_exch):
     match = resource_manager.find_exchange_by(google_exch=google_exch)
     if not match:
         return None
-    return match['exchange']
+    return match['Exchange Name']
 
 
 def find_yahoo_exchange(yahoo_exch):
@@ -93,7 +96,16 @@ def find_yahoo_exchange(yahoo_exch):
     match = resource_manager.find_exchange_by(yahoo_exch=yahoo_exch)
     if not match:
         return None
-    return match['exchange']
+    return match['Exchange Name']
+
+
+def find_mic_exchange(mic):
+    """Find official exchange name for given mic
+    """
+    match = resource_manager.find_exchange_by(mic=mic)
+    if not match:
+        return None
+    return match['Exchange Name']
 
 
 def find_country_for_exchange(exchange):
@@ -103,12 +115,7 @@ def find_country_for_exchange(exchange):
     country name will be returned
     """
     match = resource_manager.find_exchange_by(exchange=exchange)
-    if not match:
-        return None
-    country_match = resource_manager.find_country_by(country=match['country'])
-    if not country_match:
-        return match['country']
-    return country_match['alpha_2']
+    return match['Country Code']
 
 
 def find_country_repr(country):
@@ -124,63 +131,6 @@ def get_logger():
     """Return internal logger
     """
     return logging.getLogger('comp_match')
-
-
-def get_exchanges_from_remote(retry=5):
-    """Get exchanges from wikiinvest
-    """
-    link = 'http://www.wikinvest.com/wiki/List_of_Stock_Exchanges'
-    headers = {
-        'Accept': (
-            'text/html,application/xhtml+xml,application/xml;'
-            'q=0.9,image/webp,*/*;q=0.8'
-        ),
-        'Accept-Encoding': 'gzip, deflate, sdch',
-        'Accept-Language': 'en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4',
-        'User-Agent': (
-            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
-            '(KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 '
-            'Chrome/52.0.2743.116 Safari/537.36'
-        )
-    }
-    query_sel = '//table//td/b[contains(text(), "Google Finance")]/../../..'
-    data = []
-    for retry_num in range(retry):
-        try:
-            res = requests.get(link, headers=headers)
-            parsed = HTMLParser.fromstring(res.content)
-            tbls = parsed.xpath(query_sel)
-            for tbl in tbls:
-                country = None
-                header = None
-                for tr in tbl.xpath('tr'):
-                    row = [
-                        ''.join(td.itertext()).strip()
-                        for td in tr.xpath('td')
-                    ]
-                    if header is None:
-                        header = row
-                        continue
-                    yahoo_exch = row[4]
-                    google_exch = row[3]
-                    exchange = row[1]
-                    if row[0]:
-                        country = row[0]
-                    data.append({
-                        'country': country,
-                        'exchange': exchange,
-                        'google_exch': google_exch,
-                        'yahoo_exch': yahoo_exch
-                    })
-            return data
-        except Exception as err:
-            get_logger().debug(
-                'Exception during requesting exchanges: %s', str(err)
-            )
-            if retry_num == retry - 1:
-                raise
-            time.sleep(random.random() * 5)
-    return data
 
 
 def get_google_finance_exchanges():

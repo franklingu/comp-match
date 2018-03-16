@@ -1,0 +1,111 @@
+Exchange Name|Country Name|Country Code|Google Exchange|Yahoo Exchange|MIC|Operating MIC
+Botswana Stock Exchange|Botswana|BW|BOT||XBOT|XBOT
+Ghana Stock Exchange|Ghana|GH|GHA||XGHA|XGHA
+Nairobi Stock Exchange|Kenya|KE|NBO||XNAI|XNAI
+Malawi Stock Exchange|Malawi|MW|MAL||XMSW|XMSW
+Casablanca Stock Exchange|Morocco|MA|CAS||XCAS|XCAS
+Nigerian Stock Exchange|Nigeria|NG|NIG||XNSA|XNSA
+JSE Securities Exchange|South Africa|ZA|JSE||XJSE|XJSE
+Lusaka Stock Exchange|Zambia|ZM|LUS||XLUS|XLUS
+Zimbabwe Stock Exchange|Zimbabwe|ZW|ZIM||XZIM|XZIM
+Australian Securities Exchange|Australia|AU|ASX|.AX|XASX|XASX
+Dhaka Stock Exchange|Bangladesh|BD|||XDHA|XDHA
+Hong Kong Stock Exchange|China|CN|HKG|.HK|XHKG|XHKG
+Shanghai Stock Exchange|China|CN|SHA|.SS|XSHG|XSHG
+Shenzhen Stock Exchange|China|CN|SHE|.SZ|XSHE|XSHE
+National Stock Exchange of India|India|IN|NSE|.NS|XNSE|XNSE
+Bombay Stock Exchange|India|IN|BOM|.BO||
+Indonesia Stock Exchange|Indonesia|ID|JAK|.JK|XIDX|XIDX
+Fukuoka Stock Exchange|Japan|JP|FUK||XFKA|XFKA
+Hercules Stock Exchange|Japan|JP|NJM|||
+JASDAQ Securities Exchange|Japan|JP|JSD||XJAS|XJPX
+Nagoya Stock Exchange|Japan|JP|NAG||XNGO|XNGO
+Osaka Securities Exchange|Japan|JP|OSA||XOSE|XJPX
+Sapporo Securities Exchange|Japan|JP|||XSAP|XSAP
+Tokyo Stock Exchange|Japan|JP|TYO||XTAM|XJPX
+Korea Stock Exchange|Korea, Republic of|KR|KRX|.KS|XKRX|XKRX
+KOSDAQ|Korea, Republic of|KR|KDQ|.KQ|XKOS|XKRX
+Malaysia Exchange|Malaysia|MY|KUL|.KL|XKLS|XKLS
+New Zealand Exchange|New Zealand|NZ|NZE|.NZ|XNZE|XNZE
+Karachi Stock Exchange|Pakistan|PK|KAR|||
+Lahore Stock Exchange|Pakistan|PK|Lah|||
+Philippine Stock Exchange|Philippines|PH|PSE||XPHS|XPHS
+Singapore Exchange|Singapore|SG|SGX|.SI|XSES|XSES
+Saudi Stock Exchange|Saudi Arabia|SA|TADAWUL||XSAU|XSAU
+Colombo Stock Exchange|Sri Lanka|LK|COL||XCOL|XCOL
+GreTai Securities Market|Taiwan|||||
+Taiwan Stock Exchange|Taiwan||TPE|.TW|XTAI|XTAI
+Stock Exchange of Thailand|Thailand|TH|BKK||XBKK|XBKK
+Ho Chi Minh Stock Exchange|Vietnam||||HSTC|HSTC
+Vienna Stock Exchange|Austria|AT|VIE|.VI||
+Euronext - Brussels|Belgium|BE|EBR|.BR|XBRU|XBRU
+Bulgarian Stock Exchange|Bulgaria|BG|BUL||XBUL|XBUL
+Zagreb Stock Exchange|Croatia|HR|ZSE||XZAG|XZAG
+Cyprus Stock Exchange|Cyprus|CY|CSE||XCYS|XCYS
+Prague Stock Exchange|Czech Republic|CZ|PRG||XPRA|XPRA
+OMX Nordic Exchange - Copenhagen|Denmark|DK|CPH|||
+GXG Markets|Denmark|DK|AMP||GXGR|GXGR
+OMX Baltic Exchange - Tallinn|Estonia|EE|TAL|||
+OMX Nordic Exchange - Helsinki|Finland|FI|HEL|||
+Euronext - Paris|France|FR|EPA|.PA||
+Berlin Stock Exchange|Germany|DE|BER|.BE||
+XETRA|Germany|DE|ETR|.DE|XETR|XETR
+Dusseldorf Stock Exchange|Germany|DE||||
+Frankfurt Stock Exchange|Germany|DE|FRA|.F||
+Munich Stock Exchange|Germany|DE||||
+Stuttgart Stock Exchange|Germany|DE|STU|.SG||
+Athens Exchange|Greece|GR|ATH||AAPA|AAPA
+Budapest Stock Exchange|Hungary|HU|BDP||XBUD|XBUD
+Irish Stock Exchange|Ireland|IE|ISE|.IR|XDUB|XDUB
+NASDAQ OMX Iceland|Iceland|IS|ICE|||
+Borsa Italiana|Italy|IT|BIT|.MI|XMIL|XMIL
+OMX Baltic Exchange - Riga|Latvia|LV|RSE|||
+OMX Baltic Exchange - Vilnius|Lithuania|LT|VSE|||
+Luxembourg Stock Exchange|Luxembourg|LU|LUX||XLUX|XLUX
+Macedonian Stock Exchange|Macedonia||MSE||XMAE|XMAE
+Euronext - Amsterdam|Netherlands|NL|AMS|.AS||
+Oslo Stock Exchange|Norway|NO|OSL|.OL||
+Warsaw Stock Exchange|Poland|PL|WAR||XWAR|XWAR
+Euronext - Lisbon|Portugal|PT|ELI|.LS||
+Bucharest Stock Exchange|Romania|RO|BSE|||
+Sibex-Sibiu Stock Exchange|Romania|RO|SBX|||
+Russian Trading System|Russia||RTC|||
+Moscow Interbank Currency Exchange|Russia|||||
+Warsaw Stock Exchange|Poland|PL|WSE||XWAR|XWAR
+Moscow Exchange|Russia||MCX||MISX|MISX
+Bratislava Stock Exchange|Slovakia|SK|||XBRA|XBRA
+Ljubljana Stock Exchange|Slovenia|SI|LJE||XLJU|XLJU
+Barcelona Stock Exchange|Spain|ES|BCN|||
+Spanish Stock Exchange|Spain|ES|BME|||
+Madrid Stock Exchange|Spain|ES|MCE|.MA||
+OMX Nordic Exchange - Stockholm|Sweden|SE|STO|||
+Berne eXchange|Switzerland|CH|BRN|||
+SIX Swiss Exchange|Switzerland|CH|SWX|.VX|XSWX|XSWX
+Swiss Europe|Switzerland|CH|VTX|.VX||
+Istanbul Stock Exchange|Turkey|TR|IST|||
+London Stock Exchange|United Kingdom|GB|LON|.L|ECHO|ECHO
+PLUS Markets Group|United Kingdom|GB|OFEX|||
+Bahrain Stock Exchange|Bahrain|BH|BSH|||
+Egyptian Stock Exchange|Egypt|EG|CAI|||
+Cairo & Alexandria Stock Exchange|Egypt|EG||||
+Tel Aviv Stock Exchange|Israel|IL|TLV|.TA|XTAE|XTAE
+Amman Stock Exchange|Jordan|JO|AFM||XAMM|XAMM
+Beirut Stock Exchange|Lebanon|LB|BEY||XBEY|XBEY
+Palestine Securities Exchange|Palestine||PAS||XPAE|XPAE
+NASDAQ Dubai|United Arab Emirates|AE|DFM||DIFX|DIFX
+Damascus Securities Exchange|Syria||DSE||XDSE|XDSE
+Bermuda Stock Exchange|Bermuda|BM|BSX||XBDA|XBDA
+Canada National Stock Exchange|Canada|CA|CNSX|||
+Toronto Stock Exchange|Canada|CA|TSE|.TO|XTSE|XTSE
+TSX Venture Exchange|Canada|CA|CVE|.V|XTSX|XTSX
+American Stock Exchange|United States|US|NYSEAMEX|||
+NYSE Markets|United States|US|NYSEMKT|||
+NASDAQ OMX BX|United States|US|NASDAQ||XBXO|XNAS
+Chicago Stock Exchange|United States|US|||XCHI|XCHI
+NASDAQ|United States|US|NASDAQ||XARM|XARM
+National Stock Exchange|United States|US|||XNEC|XNEC
+New York Stock Exchange|United States|US|NYSE||XNYS|XNYS
+NYSE Arca Stock Exchange|United States|US|NYSEARCA||ARCX|XNYS
+NASDAQ OMX PHLX|United States|US|NASDAQ||XPHL|XNAS
+Buenos Aires Stock Exchange|Argentina|AR|BCBA|||
+Bovespa Stock Exchange|Brazil|BR|BVMF|||
