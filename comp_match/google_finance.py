@@ -2,9 +2,12 @@
 """
 import random
 import time
+try:
+    import simplejson as json
+except ImportError:
+    import json
 
 import requests
-from lxml import html as HTMLParser
 
 from .base import BaseNameMatcher, CompanyUnderline
 from ._utils import get_logger
@@ -12,42 +15,41 @@ from ._utils import get_logger
 
 class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
         BaseNameMatcher):
+    """Match name to stock ticker via Google Finance
+    """
+    AGENT = 'google_finance'
+
     def __init__(self):
         super(GoogleFinanceNameMatcher, self).__init__()
-        self.base_url = 'https://finance.google.com/finance'
+        self.base_url = 'https://www.google.com/complete/search'
 
-    def _parse_google_finance_response(self, page_content):
+    def _parse_google_finance_response(  # pylint: disable=no-self-use
+            self, name, page_content):
         symbols = []
-        primary_sel = (
-            '#appbar > div.elastic > div.appbar-center > '
-            'div.appbar-snippet-primary > span'
-        )
-        secondary_sel = (
-            '#appbar > div.elastic > div.appbar-center > '
-            'div.appbar-snippet-secondary > span'
-        )
-        others_sel = ('.gf-table.company_results > tr.snippet')
-        parsed = HTMLParser.fromstring(page_content)
-        com_name_elems = parsed.cssselect(primary_sel)
-        ti_elems = parsed.cssselect(secondary_sel)
-        if com_name_elems:
-            ticker = ti_elems[0].text.strip().lstrip('(').rstrip(')')
-            symbols.append((
-                com_name_elems[0].text,
-                ticker.split(':')[0], ticker.split(':')[1]
-            ))
-        else:
-            rows = parsed.cssselect(others_sel)
-            for row in rows:
-                rec = [
-                    ''.join(el.itertext()).strip()
-                    for el in row.cssselect('td')
-                ]
-                symbols.append((rec[0], rec[1], rec[2]))
+        try:
+            parsed = json.loads(page_content)
+        except ValueError:
+            raise
+        if (not isinstance(parsed, list) or not parsed or parsed[0] != name
+                or len(parsed) < 2):
+            raise ValueError('Google response does not seem normal')
+        for candidate in parsed[1]:
+            if len(candidate) < 4 or not isinstance(candidate[3], dict):
+                continue
+            ticker = candidate[3].get('t', '')
+            google_exch = candidate[3].get('x', '')
+            mapped_name = candidate[3].get('c', '')
+            if not ticker or not google_exch:
+                continue
+            symbols.append((mapped_name, ticker, google_exch))
         return symbols
 
     def _find_stock_for_name(self, name, retry=5, sleep=30):
-        params = {'q': name}
+        params = {
+            'client': 'finance-immersive',
+            'q': name,
+            'xhr': 't',
+        }
         headers = self._get_headers()
         symbols = []
         for retry_num in range(retry):
@@ -55,7 +57,9 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
                 res = requests.get(
                     self.base_url, headers=headers, params=params
                 )
-                symbols = self._parse_google_finance_response(res.content)
+                symbols = self._parse_google_finance_response(
+                    name, res.content
+                )
                 break
             except Exception as err:  # pylint: disable=broad-except
                 get_logger().debug(
