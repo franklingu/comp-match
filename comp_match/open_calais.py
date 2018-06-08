@@ -28,8 +28,9 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
         }
 
     def _match_by(self, names, **kwargs):
-        retry = kwargs.pop('retry', 5)
-        sleep = kwargs.pop('sleep', 30)
+        names = list(names)
+        retry = int(kwargs.pop('retry', 5))
+        sleep = int(kwargs.pop('sleep', 30))
         end, curr, step = len(names), 0, 50
         ret = {}
         while curr < end:
@@ -65,7 +66,7 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
                     time.sleep(random.random() * sleep + sleep * retry_num)
         raw_matches = self._process_rdf_response(res_content)
         ret_data = {}
-        for name, raw_match in raw_matches.items():
+        for _, raw_match in raw_matches.items():
             orig_name, legal_name, ric, ticker, permid, score = raw_match
             ret_data[orig_name] = [(
                 legal_name,
@@ -79,8 +80,7 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
     def _process_rdf_response(self, res_content):
         """Parse rdf file from open calais
         """
-        parsed = etree.parse(res_content)
-        rdf = parsed.getroot()
+        rdf = etree.fromstring(res_content)
         match = {}
         match_top = {}
         top_most_type = (
@@ -136,25 +136,28 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
         return ret
 
     def _match_to_underline(self, ticker, permid, retry=5, sleep=30):
+        root_link = 'https://permid.org/1-{}'.format(permid)
         link = 'https://permid.org/api/mdaas/getEntityById/{}'.format(permid)
         headers = self._get_headers()
         del headers['Content-Type']
         del headers['outputformat']
-        for retry_num in range(retry):
-            try:
-                res = requests.post(
-                    link, headers=headers, timeout=80
-                )
-                res_obj = res.json()
-                for quote in res_obj['mainQuoteId.mdaas']:
-                    mic = quote.get('Primary Mic', [''])[0]
-                    underline = CompanyUnderline(ticker=ticker, mic=mic)
-                    return underline
-            except Exception as err:  # pylint: disable=broad-except
-                get_logger().debug(
-                    'Exception during requesting opencalais: %s', str(err)
-                )
-                if retry_num == retry - 1:
-                    pass
-                else:
-                    time.sleep(random.random() * sleep + sleep * retry_num)
+        with requests.Session() as session:
+            session.get(root_link)
+            for retry_num in range(retry):
+                try:
+                    res = session.get(
+                        link, headers=headers, timeout=sleep
+                    )
+                    res_obj = res.json()
+                    for quote in res_obj['mainQuoteId.mdaas']:
+                        mic = quote.get('Primary Mic', [''])[0]
+                        underline = CompanyUnderline(ticker=ticker, mic=mic)
+                        return underline
+                except Exception as err:  # pylint: disable=broad-except
+                    get_logger().debug(
+                        'Exception during requesting opencalais: %s', str(err)
+                    )
+                    if retry_num == retry - 1:
+                        pass
+                    else:
+                        time.sleep(random.random() * sleep + sleep * retry_num)

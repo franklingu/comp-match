@@ -3,10 +3,7 @@
 from abc import ABCMeta
 import random
 
-from ._utils import (
-    find_google_exchange, find_yahoo_exchange, find_mic_exchange,
-    find_country_for_exchange, find_country_repr,
-)
+from ._utils import resource_manager
 
 
 class BaseNameMatcher(  # pylint: disable=too-few-public-methods
@@ -78,10 +75,9 @@ class CompanyUnderline(object):
             self.google_exch = kwargs.pop('google_exch')
         if kwargs.get('yahoo_exch'):
             self.yahoo_exch = kwargs.pop('yahoo_exch')
-        if kwargs.get('country'):
-            self.country = kwargs.pop('country')
+        if kwargs.get('country_code'):
+            self.country_code = kwargs.pop('country_code')
         self.setup_exchange()
-        self.setup_country()
         self.validate(strict_validate)
 
     @property
@@ -91,25 +87,19 @@ class CompanyUnderline(object):
     def setup_exchange(self):
         """Set exchange based on known information
         """
+        def set_exchange(self, attr):
+            if hasattr(self, attr):
+                cond = {attr: getattr(self, attr, '')}
+                match = resource_manager.find_exchange_by(**cond)
+                if match is not None:
+                    self.exchange = match['Exchange Name']
+                    if match['Country Code']:
+                        self.country_code = match['Country Code']
+
         if hasattr(self, 'exchange') and self.exchange is not None:
             return
-        if hasattr(self, 'google_exch'):
-            self.exchange = find_google_exchange(self.google_exch)
-        if hasattr(self, 'yahoo_exch'):
-            self.exchange = find_yahoo_exchange(self.yahoo_exch)
-        if hasattr(self, 'mic'):
-            self.exchange = find_mic_exchange(self.mic)
-
-    def setup_country(self):
-        """Set country based on known information
-        """
-        if not hasattr(self, 'exchange') or self.exchange is None:
-            return
-        exch_country = find_country_for_exchange(self.exchange)
-        if hasattr(self, 'country') and self.country:
-            if self.country == exch_country:
-                return
-        self.country = exch_country
+        for attr in ['google_exch', 'yahoo_exch', 'mic']:
+            set_exchange(self, attr)
 
     def validate(self, strict_validate=False):
         """Validate the current presentation of an underline
@@ -129,12 +119,21 @@ class CompanyUnderline(object):
 
     def __repr__(self):
         return 'CompanyUnderline: [{}@{}@{}]'.format(
-            getattr(self, 'ticker', 'None'), getattr(self, 'exchange', 'None'),
-            find_country_repr(getattr(self, 'country', 'UN'))
+            getattr(self, 'ticker', ''),
+            getattr(self, 'exchange', ''),
+            getattr(self, 'country_code', 'UN')
         )
 
     def __str__(self):
-        return repr(self)
+        return '{}@{}'.format(
+            getattr(self, 'ticker', ''),
+            getattr(self, 'country_code', 'UN')
+        )
+
+    def __eq__(self, other):
+        if not isinstance(other, self.__class__):
+            return False
+        return str(self) == str(other)
 
     def __hash__(self):
-        return hash(repr(self))
+        return hash(str(self))

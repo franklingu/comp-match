@@ -14,7 +14,8 @@ def test_yh_success_matching(get_mock):
         assert get_mock.call_count == 1
     assert 'Apple' in symbols
     assert symbols['Apple'][0][1].ticker == 'AAPL'
-    assert symbols['Apple'][0][1].country == 'US'
+    assert symbols['Apple'][0][1].country_code == 'US'
+    assert symbols['Apple'][2][1].country_code == 'MX'
 
 @patch('requests.get', return_value=MockedResponse('yh_apple.json', fails=2))
 def test_yh_matching_with_exception(get_mock):
@@ -23,7 +24,7 @@ def test_yh_matching_with_exception(get_mock):
     assert get_mock.call_count == 3
     assert 'Apple' in symbols
     assert symbols['Apple'][0][1].ticker == 'AAPL'
-    assert symbols['Apple'][0][1].country == 'US'
+    assert symbols['Apple'][0][1].country_code == 'US'
     symbols = yh_matcher.match_by('Apple', retry=2, sleep=0)
     try:
         get_mock.assert_called()
@@ -41,4 +42,4 @@ def test_gf_multiple_matching(get_mock):
         assert get_mock.call_count == 1
     assert 'zhihu' in symbols
     assert symbols['zhihu'][0][1].ticker == '603156'
-    assert symbols['zhihu'][0][1].country == 'CN'
+    assert symbols['zhihu'][0][1].country_code == 'CN'

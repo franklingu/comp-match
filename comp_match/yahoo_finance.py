@@ -73,7 +73,7 @@ class YahooFinanceNameMatcher(  # pylint: disable=too-few-public-methods
                     CompanyUnderline(
                         ticker=symbol[1],
                         yahoo_exch=symbol[2],
-                        country=symbol[3]
+                        country_code=symbol[3]
                     ),
                     {'exch': symbol[4], 'exch_desc': symbol[5]}
                 ))
