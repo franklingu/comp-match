@@ -75,7 +75,7 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
     def _match_by(self, names, **kwargs):
         ret = {}
         retry = kwargs.pop('retry', 5)
-        sleep = kwargs.pop('sleep', 30)
+        sleep = int(kwargs.pop('sleep', 30))
         for name in names:
             symbols = self._find_stock_for_name(
                 name, retry=retry, sleep=sleep,
@@ -84,7 +84,7 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
             for symbol in symbols:
                 ret[name].append(
                     (symbol[0], CompanyUnderline(
-                        ticker=symbol[2], google_exch=symbol[1]
+                        ticker=symbol[1], google_exch=symbol[2]
                     ), {})
                 )
         return ret
