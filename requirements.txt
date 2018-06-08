@@ -1,6 +1,6 @@
 pytest>=3.4.1
-pylint~=1.8.2
-requests[security]~=2.18.4
-lxml~=4.2.0
-cssselect~=1.0.3
+pylint>=1.8.2
+requests[security]>=2.18.4
+lxml>=4.2.0
+cssselect>=1.0.3
 pytest-cov>=2.5.1

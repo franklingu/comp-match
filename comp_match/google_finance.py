@@ -30,6 +30,8 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
             parsed = json.loads(page_content)
         except ValueError:
             raise
+        except TypeError:
+            parsed = json.loads(page_content.decode('utf-8'))
         if (not isinstance(parsed, list) or not parsed or parsed[0] != name
                 or len(parsed) < 2):
             raise ValueError('Google response does not seem normal')
