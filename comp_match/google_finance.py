@@ -57,7 +57,8 @@ class GoogleFinanceNameMatcher(  # pylint: disable=too-few-public-methods
         for retry_num in range(retry):
             try:
                 res = requests.get(
-                    self.base_url, headers=headers, params=params
+                    self.base_url, headers=headers, params=params,
+                    timeout=sleep + 3
                 )
                 symbols = self._parse_google_finance_response(
                     name, res.content

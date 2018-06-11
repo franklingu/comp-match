@@ -52,7 +52,8 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
         for retry_num in range(retry):
             try:
                 res = requests.post(
-                    link, data=content, headers=self._get_headers(), timeout=80
+                    link, data=content, headers=self._get_headers(),
+                    timeout=sleep + 3
                 )
                 res_content = res.content
                 break
@@ -77,7 +78,7 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
             )]
         return ret_data
 
-    def _process_rdf_response(self, res_content):
+    def _process_rdf_response(self, res_content):  # pylint: disable=no-self-use
         """Parse rdf file from open calais
         """
         rdf = etree.fromstring(res_content)
@@ -110,13 +111,13 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
             if subj not in raw:
                 raw[subj] = {}
                 raw_top[subj] = {}
-            for xp in names:
-                elems = desc.xpath(xp, namespaces=rdf.nsmap)
+            for xpath in names:
+                elems = desc.xpath(xpath, namespaces=rdf.nsmap)
                 if elems:
                     if rtype and rtype[0] == top_most_type:
-                        raw_top[subj][xp] = elems[0].text
+                        raw_top[subj][xpath] = elems[0].text
                     else:
-                        raw[subj][xp] = elems[0].text
+                        raw[subj][xpath] = elems[0].text
         for subj, elem in raw.items():
             if not elem:
                 continue
@@ -125,14 +126,24 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
         for subj, elem in raw_top.items():
             if not elem:
                 continue
-            row = [elem.get(name, '') for name in names]
-            raw_elem = raw.get(subj)
+            raw_elem = raw.get(subj, {})
+            row = [
+                elem.get(name, '')
+                if name != './c:exact' else raw_elem.get(name, '')
+                for name in names
+            ]
             if not raw_elem:
                 continue
             match_top[raw_elem['./c:exact']] = row
         ret = {}
         ret.update(match_top)
-        ret.update(match)
+        for exact_name, match_row in match.items():
+            if exact_name not in ret:
+                ret[exact_name] = match_row
+                continue
+            # only overwrite if match_row ric is not empty
+            if match_row[3]:
+                ret[exact_name] = match_row
         return ret
 
     def _match_to_underline(self, ticker, permid, retry=5, sleep=30):
@@ -142,11 +153,14 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
         del headers['Content-Type']
         del headers['outputformat']
         with requests.Session() as session:
-            session.get(root_link)
+            try:
+                session.get(root_link, timeout=sleep + 3)
+            except Exception:  # pylint: disable=broad-except
+                pass
             for retry_num in range(retry):
                 try:
                     res = session.get(
-                        link, headers=headers, timeout=sleep
+                        link, headers=headers, timeout=sleep + 3
                     )
                     res_obj = res.json()
                     for quote in res_obj['mainQuoteId.mdaas']:

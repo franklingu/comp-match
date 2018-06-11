@@ -1,3 +1,5 @@
+"""Unit test for google_finance
+"""
 from unittest.mock import patch
 
 from comp_match.google_finance import GoogleFinanceNameMatcher

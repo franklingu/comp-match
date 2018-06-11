@@ -11,6 +11,8 @@ from ._utils import get_logger
 
 class YahooFinanceNameMatcher(  # pylint: disable=too-few-public-methods
         BaseNameMatcher):
+    """Match name using YahooFinance service
+    """
     def __init__(self):
         super(YahooFinanceNameMatcher, self).__init__()
         self.base_url = 'http://autoc.finance.yahoo.com/autoc'
@@ -22,7 +24,8 @@ class YahooFinanceNameMatcher(  # pylint: disable=too-few-public-methods
         for retry_num in range(retry):
             try:
                 res = requests.get(
-                    self.base_url, headers=self._get_headers(), params=params
+                    self.base_url, headers=self._get_headers(),
+                    params=params, timeout=sleep + 3
                 )
                 data = res.json()
                 for result in data['ResultSet']['Result']:

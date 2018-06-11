@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Use of the Calais Web Service is governed by the Terms of Service located at http://www.opencalais.com. By using this service or the results of the service you agree to these terms of service.-->
+<!--Relations:
+Company: Google
+-->
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:c="http://s.opencalais.com/1/pred/">
+   <rdf:Description c:calaisRequestID="e80e18e1-e174-56a2-163e-f49b60d5c781" c:id="http://id.opencalais.com/FpI7E5Swr1Ya2GeVmYLGSQ" c:ontology="http://mdaas-virtual-onecalais.int.thomsonreuters.com/owlschema/11.7/onecalais.owl.allmetadata.xml" rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+      <c:document>
+         <![CDATA[Google is a public company]]>
+      </c:document>
+      <c:docTitle/>
+      <c:docDate>2018-06-11 14:39:35.547</c:docDate>
+   </rdf:Description>
+   <rdf:Description c:contentClass="News" c:contentType="text/raw" c:language="InputTextTooShort" c:processingVer="AllMetadata" c:serverVersion="OneCalais_11.7-RELEASE:5" c:stagsVer="OneCalais_11.7-RELEASE-b2-2018-04-18_01:34:37" c:submissionDate="2018-06-11 14:39:35.437" rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/meta">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:submitterCode>0ca6a864-5659-789d-5f32-f365f695e757</c:submitterCode>
+      <c:signature>digestalg-1|jsqBMh2i7GyANOumIbRHVTdrDlI=|ExKTG3Ne9cBZLmNTQTXUpv5nfulKKRABmJDV6o5lzp7fxTUXYpci4Q==</c:signature>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/ComponentVersions">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/sys/ComponentVersions"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:version>DIY-Categorization-fnr-TRCS-prcng_3:20171117095241:20171117095241</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-curint-News:20180221133342:20180221133342</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-capx:20170627191152:20170627191152</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-abs-News:20180321093043:20180321093043</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-cstcut_new-News:20180301140156:20180301140156</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-margnu:20171117095324:20171117095324</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-pgm___PGM-News:20180508065449:20180508065449</c:version>
+      <c:version>Deals Index:201806111410:201806111410</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-cttl___CTTL-News:20180424161004:20180424161004</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-indx_stsale:20170323110805:20170323110805</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-margin_pressure_rsch_joel___MARGND-Research:20180518140643:20180518140643</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-comptn:20170621141739:20170621141739</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-plcy___PLCY-News:20180416161629:20180416161629</c:version>
+      <c:version>index-refineries:201806091325:201806091325</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-regs_buyb_new:20170509091609:20170509091609</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-int___INT-News:20180326113056:20180326113056</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-risk_infring_ola___M_1TC-News:20180605101139:20180605101139</c:version>
+      <c:version>config-physicalAssets-powerStations:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-same_store_sales_sai_rch___STSALE-Research:20180508132425:20180508132425</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-revenue_drivers_ram_rch___REVDRV-Research:20180406095446:20180406095446</c:version>
+      <c:version>NextTags:OneCalais_11.7-RELEASE:5</c:version>
+      <c:version>SpanishIM:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-accounting_issues_rsch_joel___ACCI-Research:20180405085125:20180405085125</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-pltry___PLTRY-News:20180502073135:20180502073135</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-infl-News:20180206095852:20180206095852</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-newjbs:20180124163802:20180124163802</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-dis:20170418132337:20170418132337</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-revdrv2-News:20180202125843:20180202125843</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-splitb_r1:20170329082516:20170329082516</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-alu-News:20180314130406:20180314130406</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-ils___ILS-News:20180419135358:20180419135358</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-esgenv_2-News:20180202131300:20180202131300</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-loa___LOA-News:20180409071645:20180409071645</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-margnd_2:20171117095121:20171117095121</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-soy1___SOY1-News:20180521141509:20180521141509</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-change_of_cfo_joel_res-Research:20180315092841:20180315092841</c:version>
+      <c:version>config-sca-DataPackage:50:50</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-tracc___TRACC-News:20180409095318:20180409095318</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-mergers___acquisitions__joel_rch-Research:20180322100020:20180322100020</c:version>
+      <c:version>config-companyNe:844:844</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-acb:20170502102348:20170502102348</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-stsale_new-News:20180302131833:20180302131833</c:version>
+      <c:version>DIY-Categorization-support-TRCS-test_mike3___JointVenture-News:20180408082242:20180408082242</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-scrp___SCRP-News:20180514114027:20180514114027</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hosal_jayasimha-News:20180320092027:20180320092027</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-levrge:20170621122109:20170621122109</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-nkl___NKL-News:20180605132818:20180605132818</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hedge_list1:20170625000000:20170625000000</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-corporate_inventory_rama_rch___INVTRY-Research:20180329065542:20180329065542</c:version>
+      <c:version>SECHeaderMetadataIM:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-soil___SOIL-News:20180601140445:20180601140445</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-esggov-News:20180301091656:20180301091656</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-sales1:20171219091829:20171219091829</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-product_launches_rsch_joel___PRDLCH-Research:20180604142910:20180604142910</c:version>
+      <c:version>config-refreshableDIY:3:3</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-crycur:20171121113558:20171121113558</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-competition_sai_kiran_rch___COMPTN-Research:20180412104501:20180412104501</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-rmrmrg:20171204112525:20171204112525</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-capital_expenditure_rama_rch2-Research:20180305132538:20180305132538</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-money_laundering_trial___M_1SH-News:20180425112705:20180425112705</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hjk_sajith___HJK-News:20180427070940:20180427070940</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-frxrte:20171229123536:20171229123536</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-war___WAR-News:20180419081608:20180419081608</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-esgsoc_2-News:20180315093602:20180315093602</c:version>
+      <c:version>People Index:201806111200:201806111200</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-mons___MONS-News:20180404103759:20180404103759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-pall___PALL-News:20180601131312:20180601131312</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-wine1___WINE1-News:20180522120541:20180522120541</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-ocrim___OCRIM-News:20180417114410:20180417114410</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-ceo1_new___CEO1-News:20180515143641:20180515143641</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-gol_new___GOL-News:20180511091509:20180511091509</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-awlq:20170331124441:20170331124441</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-segment_revenue_rsh_sai_2___SEGREV-Research:20180406153631:20180406153631</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-corporate_valuation_rama_rch___CVALU-Research:20180403102035:20180403102035</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-market_share_rsch_joel_new___MKTSHR-Research:20180403070617:20180403070617</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-murd_sajith___MURD-News:20180418122332:20180418122332</c:version>
+      <c:version>config-negativeSignature:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-poil___POIL-News:20180524145900:20180524145900</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-fake1_monop_bnkcap_new:20170405133257:20170405133257</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-nrg___NRG-News:20180515122734:20180515122734</c:version>
+      <c:version>Dial4J:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-share_buybacks_repurchase_ram_rh-Research:20180322095215:20180322095215</c:version>
+      <c:version>AutocoderRuntimeIM:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-corporate_controversy_rsh_sai2___CVRSY-Research:20180606105315:20180606105315</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-dbtr_new:20170315123740:20170315123740</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-auct___AUCT-News:20180425084455:20180425084455</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-scale_2:20171130072915:20171130072915</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-dbulk___DBULK-News:20180403110302:20180403110302</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-gdp-News:20180321130548:20180321130548</c:version>
+      <c:version>OA Override:842:842</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-civ___CIV-News:20180607121523:20180607121523</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hrgt:20170427081548:20170427081548</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-xpand:20170323144646:20170323144646</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-kycterror-News:20180223164257:20180223164257</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-leverage_ratios_rama_rch-Research:20180305132725:20180305132725</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-same_store_sales_sai_rch-Research:20180320084305:20180320084305</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-bonus_share_issues_sai_rch-Research:20180305132618:20180305132618</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-resass-News:20180208130324:20180208130324</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-allcemrgdvst2:20170424130000:20170424130000</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-lead1-News:20180321121644:20180321121644</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-plat___PLAT-News:20180513085820:20180513085820</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-ordr:20170313151239:20170313151239</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-eqb___EQB-News:20180510082724:20180510082724</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-coc___COC-News:20180423125041:20180423125041</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-coa___COA-News:20180524073631:20180524073631</c:version>
+      <c:version>People Override:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-seasns_kamila-News:20180320120211:20180320120211</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-change_of_ceo_ram_rch___CEO1-Research:20180403103028:20180403103028</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hrgt_recll:20170522120000:20170522120000</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-fraud1___FRAUD1-News:20180608135213:20180608135213</c:version>
+      <c:version>index-company-oa3:201806070155:201806070155</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hoil___HOIL-News:20180515122702:20180515122702</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-rawm___RAWM-News:20180403083541:20180403083541</c:version>
+      <c:version>index-vessels:201806091915:201806091915</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-brib_r1:20170329090629:20170329090629</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-mplt___MPLT-News:20180327111715:20180327111715</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-shareholder_activism_rama_rch-Research:20180320142730:20180320142730</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-cvalu:20171212133524:20171212133524</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-performan_result_earning_ram_rch___RES-Research:20180516103928:20180516103928</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-csent-News:20180314134456:20180314134456</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-disasters___accidents_rsch_joel___DIS-Research:20180412092858:20180412092858</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-kycaas_bribery_and_corruption___M_1S5-News:20180524131445:20180524131445</c:version>
+      <c:version>BrokerResearchIM:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-company_cost_reduction_ram_rch2-Research:20180320152742:20180320152742</c:version>
+      <c:version>config-forEndUserDisplay:3:3</c:version>
+      <c:version>config-refineries:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-cdo2-News:20180315084530:20180315084530</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-prdlch-News:20180201133354:20180201133354</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-strategic_combinations_joel_rch-Research:20180315092813:20180315092813</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-ipr-News:20180319134217:20180319134217</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-fapm:20170713144316:20170713144316</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-class:20170315123207:20170315123207</c:version>
+      <c:version>config-cse:1:1</c:version>
+      <c:version>OneCalaisIM:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-isu_dat_r:20170405124144:20170405124144</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-cnsl_sisu:20170321144134:20170321144134</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-customer_loyalty_sai_rch___CLYLTY-Research:20180409122355:20180409122355</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-narc_kairav___NARC-News:20180510113450:20180510113450</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-newjbs-News:20180123114120:20180123114120</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-shract_r1:20170412111808:20170412111808</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-demand_rsch_joel2___SALES1-Research:20180427132317:20180427132317</c:version>
+      <c:version>config-vessels:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-product_shipments_rashmi_rch2-Research:20180313094806:20180313094806</c:version>
+      <c:version>OneCalais:OneCalais_11.7-RELEASE:5</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-invtry_09_25_2017:20171120093416:20171120093416</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-organizational_rest_rsch_joel___REORG-Research:20180508125004:20180508125004</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-igd___IGD-News:20180509090349:20180509090349</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-risk_violent_crime___VCRIM-News:20180607141731:20180607141731</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-mktshr2:20170705120412:20170705120412</c:version>
+      <c:version>DIY-RCS-fnr-TRCS-cavs:4:4</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-wom___WOM-News:20180508045954:20180508045954</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-divestitures_spin_offs_rash_rch-Research:20180305132659:20180305132659</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-jet___JET-News:20180604151907:20180604151907</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-mtg___MTG-News:20180423093530:20180423093530</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-eub___EUB-News:20180327093517:20180327093517</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-blktrd_r1:20171116075645:20171116075645</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-znc___ZNC-News:20180412130505:20180412130505</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-trd_tax:20170309132522:20170309132522</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-reorg_new___REORG-News:20180601111024:20180601111024</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-product_recalls_rsh_sai2___RECLL-Research:20180425121704:20180425121704</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-expansions_new_markets_sai_rsh2___XPAND-Research:20180605143141:20180605143141</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-sov_2:20170522130956:20170522130956</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-risk_information_leaked___LKD-News:20180611080047:20180611080047</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-bons:20170406103713:20170406103713</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-fake1___FAKE1-News:20180516150141:20180516150141</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-antitrust_competitive_behaviour2___MONOP-Research:20180430152713:20180430152713</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-racr___RACR-News:20180404134359:20180404134359</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-corruption___bribery___joel_rch-Research:20180319102344:20180319102344</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-commercial_contract_wins_sai_rch___ORDR-Research:20180413122334:20180413122334</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-change_of_chairperson_rsch_joel___CHAIR1-Research:20180430061611:20180430061611</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-exchange_rate_impact_rama_rsh-Research:20180312091507:20180312091507</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-bankruptcy_insolvency_rsch_joel-Research:20180315095938:20180315095938</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-blkchn_4-News:20180123105513:20180123105513</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-bomb___BOMB-News:20180509143515:20180509143515</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-research_regulatory_issues___REGS-Research:20180516142505:20180516142505</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-segrev:20171117133125:20171117133125</c:version>
+      <c:version>DIY-Categorization-tms-TRCS-sanity_tms_auto_publish___CEO1-News:20180325093931:20180325093931</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-kyc_embezzlement___M_1SE-News:20180430061642:20180430061642</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hrgt_namec:20170329090731:20170329090731</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-change_of_president_joel_rch___PRES1-Research:20180402085923:20180402085923</c:version>
+      <c:version>DIY-RCS-fnr-TRCS-nd:3:3</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-stx:20170530123138:20170530123138</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-pmi-News:20180214153232:20180214153232</c:version>
+      <c:version>config-physicalAssets-mines:759:759</c:version>
+      <c:version>SocialTags Index:201806041235:201806041235</c:version>
+      <c:version>BlackList:828:828</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-mgs___MGS-News:20180529091421:20180529091421</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-shpmnt_new2:20171116121809:20171116121809</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-gol-News:20180319131232:20180319131232</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-shl___SHL-News:20180420142214:20180420142214</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-crptax:20171117095403:20171117095403</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-cppr-News:20180315144023:20180315144023</c:version>
+      <c:version>index-ports:201806091929:201806091929</c:version>
+      <c:version>FrenchIM:OneCalais_11.5-RELEASE:38</c:version>
+      <c:version>config-physicalAssets-ports:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-ream:20170529065740:20170529065740</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-rub___RUB-News:20180510113353:20180510113353</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-chld:20170524084254:20170524084254</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-raw_material_cost_rsch_joel___RAWM-Research:20180607121525:20180607121525</c:version>
+      <c:version>DIY-Categorization-tms-TRCS-sanity_0104___DDEAL-News:20180408102110:20180408102110</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-allce:20170323145654:20170323145654</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-medreg:20170508120210:20170508120210</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-equity_stakes_rama_rch___STK-Research:20180329064332:20180329064332</c:version>
+      <c:version>config-drugs:759:759</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-hyd___HYD-News:20180418120003:20180418120003</c:version>
+      <c:version>DIY-Categorization-fnr-TRCS-exrsks:20171129184952:20171129184952</c:version>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/lid/DefaultLangId">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/lid/DefaultLangId"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:lang rdf:resource="http://d.opencalais.com/lid/DefaultLangId/InputTextTooShort"/>
+      <c:forenduserdisplay>false</c:forenduserdisplay>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/SocialTag/1">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/SocialTag"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:socialtag rdf:resource="http://d.opencalais.com/genericHasher-1/023cfe8d-c241-386c-beaa-ea10d0135d17"/>
+      <c:forenduserdisplay>true</c:forenduserdisplay>
+      <c:name>Google</c:name>
+      <c:importance>1</c:importance>
+      <c:originalValue>Google</c:originalValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/SocialTag/2">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/SocialTag"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:socialtag rdf:resource="http://d.opencalais.com/genericHasher-1/771e4d9a-b0cd-37a2-bec6-6840c4cafab3"/>
+      <c:forenduserdisplay>true</c:forenduserdisplay>
+      <c:name>Digital media</c:name>
+      <c:importance>1</c:importance>
+      <c:originalValue>Digital media</c:originalValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/SocialTag/3">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/SocialTag"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:socialtag rdf:resource="http://d.opencalais.com/genericHasher-1/33d8fadc-605a-33b2-a558-ee90f180dfae"/>
+      <c:forenduserdisplay>true</c:forenduserdisplay>
+      <c:name>Alphabet Inc.</c:name>
+      <c:importance>1</c:importance>
+      <c:originalValue>Alphabet Inc.</c:originalValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/SocialTag/4">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/SocialTag"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:socialtag rdf:resource="http://d.opencalais.com/genericHasher-1/36f3eafc-fbe0-3571-b28f-9343f6fda3fb"/>
+      <c:forenduserdisplay>true</c:forenduserdisplay>
+      <c:name>Outline of Google</c:name>
+      <c:importance>2</c:importance>
+      <c:originalValue>Outline of Google</c:originalValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/SocialTag/5">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/SocialTag"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:socialtag rdf:resource="http://d.opencalais.com/genericHasher-1/3210bbeb-1db3-30b3-ad61-414732d22457"/>
+      <c:forenduserdisplay>true</c:forenduserdisplay>
+      <c:name>Google+</c:name>
+      <c:importance>2</c:importance>
+      <c:originalValue>Google+</c:originalValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/cat/1">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:forenduserdisplay>false</c:forenduserdisplay>
+      <c:score>1.000</c:score>
+      <c:name>Business_Finance</c:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/cat/2">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:forenduserdisplay>false</c:forenduserdisplay>
+      <c:score>1.000</c:score>
+      <c:name>Technology_Internet</c:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/cat/3">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:forenduserdisplay>false</c:forenduserdisplay>
+      <c:score>0.869</c:score>
+      <c:name>Law_Crime</c:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/Industry/1">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/Industry"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:forenduserdisplay>false</c:forenduserdisplay>
+      <c:name>Search Engines</c:name>
+      <c:rcscode>B:1805</c:rcscode>
+      <c:trbccode>5720103011</c:trbccode>
+      <c:permid>4294951196</c:permid>
+      <c:relevance>0.800</c:relevance>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+      <c:forenduserdisplay>true</c:forenduserdisplay>
+      <c:name>Google</c:name>
+      <c:nationality>N/A</c:nationality>
+      <c:confidencelevel>0.981</c:confidencelevel>
+      <c:recognizedas>name</c:recognizedas>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/Instance/1">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:subject rdf:resource="http://d.opencalais.com/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0"/>
+      <!--Company: Google; -->
+      <c:detection>[]Google[ is a public company]</c:detection>
+      <c:prefix/>
+      <c:exact>Google</c:exact>
+      <c:suffix> is a public company</c:suffix>
+      <c:offset>0</c:offset>
+      <c:length>6</c:length>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e/Relevance/1">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/sys/RelevanceInfo"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:subject rdf:resource="http://d.opencalais.com/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0"/>
+      <c:relevance>0.8</c:relevance>
+      <c:relevancecont>0.84</c:relevancecont>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/er/company/ralg-oa/4295899948">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:name>GOOGLE LLC</c:name>
+      <c:permid>4295899948</c:permid>
+      <c:ispublic>false</c:ispublic>
+      <c:commonname>Google</c:commonname>
+      <c:score>1.0</c:score>
+      <!--Google-->
+      <c:subject rdf:resource="http://d.opencalais.com/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0"/>
+      <c:legacyid rdf:resource="http://d.opencalais.com/er/company/ralg-tr1r/ce181d44-1915-3387-83da-0dc4ec01c6da"/>
+      <c:openpermid rdf:resource="https://permid.org/1-4295899948"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/er/topmostpublicparentcompany/ralg-oa-tm/5030853586">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/er/TopmostPublicParentCompany"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <c:name>ALPHABET INC.</c:name>
+      <c:permid>5030853586</c:permid>
+      <c:primaryric>GOOGL.OQ</c:primaryric>
+      <c:ispublic>true</c:ispublic>
+      <c:commonname>Alphabet</c:commonname>
+      <!--Google-->
+      <c:subject rdf:resource="http://d.opencalais.com/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0"/>
+      <c:legacyid rdf:resource="http://d.opencalais.com/er/company/ralg-tr1r/8419f2c5-01d5-3945-a0d8-b6e8c1b685dd"/>
+      <c:openpermid rdf:resource="https://permid.org/1-5030853586"/>
+      <c:ticker>GOOGL</c:ticker>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://d.opencalais.com/conf/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0">
+      <rdf:type rdf:resource="http://s.opencalais.com/1/type/tag/Confidence"/>
+      <c:docId rdf:resource="http://d.opencalais.com/dochash-1/a1600d61-eabf-3581-a6f5-79f7d251db0e"/>
+      <!--Google-->
+      <c:subject rdf:resource="http://d.opencalais.com/comphash-1/c7172a98-4c8a-31a9-bfd4-ce426c8db3c0"/>
+      <c:statisticalfeature>0.912</c:statisticalfeature>
+      <c:dblookup>0.0</c:dblookup>
+      <c:resolution>1.0</c:resolution>
+      <c:aggregate>0.981</c:aggregate>
+   </rdf:Description>
+</rdf:RDF>
