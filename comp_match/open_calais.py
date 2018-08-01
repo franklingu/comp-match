@@ -14,6 +14,8 @@ class OpenCalaisNameMatcher(  # pylint: disable=too-few-public-methods
         BaseNameMatcher):
     """Match company names to underlines via OpenCalais
     """
+    AGENT = 'open_calais'
+
     def __init__(self, access_token=None):
         super(OpenCalaisNameMatcher, self).__init__()
         if access_token is None:

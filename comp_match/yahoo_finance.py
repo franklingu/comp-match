@@ -13,6 +13,8 @@ class YahooFinanceNameMatcher(  # pylint: disable=too-few-public-methods
         BaseNameMatcher):
     """Match name using YahooFinance service
     """
+    AGENT = 'yahoo_finance'
+
     def __init__(self):
         super(YahooFinanceNameMatcher, self).__init__()
         self.base_url = 'http://autoc.finance.yahoo.com/autoc'

@@ -5,6 +5,8 @@ import json
 
 
 class MockedResponse(object):
+    """Helper clas to mock a requests response
+    """
     def __init__(self, res_paths, fails=0, raises=ValueError):
         if isinstance(res_paths, str):
             res_paths = [res_paths]
@@ -21,10 +23,14 @@ class MockedResponse(object):
 
     @property
     def status_code(self):
+        """return status code
+        """
         return 200
 
     @property
     def content(self):
+        """return content from source file path
+        """
         self.num = self.num + 1
         idx = self.num // (self.fails + 1) - 1
         remainder = self.num % (self.fails + 1)
@@ -36,5 +42,7 @@ class MockedResponse(object):
             raise self.raises('Mocked exception')
 
     def json(self):
+        """convert content to json object
+        """
         content = self.content
         return json.loads(content.decode('utf-8'))

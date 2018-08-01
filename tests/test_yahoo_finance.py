@@ -1,3 +1,5 @@
+"""Test YahooFinanceNameMatcher
+"""
 from unittest.mock import patch
 
 from comp_match.yahoo_finance import YahooFinanceNameMatcher
@@ -6,6 +8,8 @@ from .helpers import MockedResponse
 
 @patch('requests.get', return_value=MockedResponse('yh_apple.json'))
 def test_yh_success_matching(get_mock):
+    """Test YahooFinance match successfully
+    """
     yh_matcher = YahooFinanceNameMatcher()
     symbols = yh_matcher.match_by('Apple')
     try:
@@ -19,6 +23,8 @@ def test_yh_success_matching(get_mock):
 
 @patch('requests.get', return_value=MockedResponse('yh_apple.json', fails=2))
 def test_yh_matching_with_exception(get_mock):
+    """Test YahooFinance match with network exception
+    """
     yh_matcher = YahooFinanceNameMatcher()
     symbols = yh_matcher.match_by('Apple', sleep=0)
     assert get_mock.call_count == 3
@@ -33,7 +39,9 @@ def test_yh_matching_with_exception(get_mock):
     assert not symbols['Apple']
 
 @patch('requests.get', return_value=MockedResponse('yh_zhihu.json'))
-def test_gf_multiple_matching(get_mock):
+def test_yh_multiple_matching(get_mock):
+    """Test YahooFinance match to multiple results
+    """
     yh_matcher = YahooFinanceNameMatcher()
     symbols = yh_matcher.match_by('zhihu')
     try:

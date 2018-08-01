@@ -8,6 +8,8 @@ from .helpers import MockedResponse
 
 @patch('requests.get', return_value=MockedResponse('gf_apple.json'))
 def test_gf_success_matching(get_mock):
+    """Test GoogleFinance match successfully
+    """
     gf_matcher = GoogleFinanceNameMatcher()
     symbols = gf_matcher.match_by('apple')
     try:
@@ -22,6 +24,8 @@ def test_gf_success_matching(get_mock):
 
 @patch('requests.get', return_value=MockedResponse('gf_apple.json', fails=2))
 def test_gf_matching_with_exception(get_mock):
+    """Test GoogleFinance match with network exception
+    """
     gf_matcher = GoogleFinanceNameMatcher()
     symbols = gf_matcher.match_by('apple', sleep=0)
     assert get_mock.call_count == 3
@@ -37,6 +41,8 @@ def test_gf_matching_with_exception(get_mock):
 
 @patch('requests.get', return_value=MockedResponse('gf_zhihu.json'))
 def test_gf_multiple_matching(get_mock):
+    """Test GoogleFinance match with multiple result
+    """
     gf_matcher = GoogleFinanceNameMatcher()
     symbols = gf_matcher.match_by('zhihu')
     try:

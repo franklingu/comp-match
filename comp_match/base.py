@@ -9,6 +9,8 @@ from ._utils import resource_manager
 class BaseNameMatcher(  # pylint: disable=too-few-public-methods
         object, metaclass=ABCMeta):
     """Base for name matcher"""
+    AGENT = 'base'
+
     def __init__(self, *args, **kwargs):
         """
 
@@ -30,10 +32,10 @@ class BaseNameMatcher(  # pylint: disable=too-few-public-methods
         ]
 
     def _get_headers(self):
-        ua = self.ua_reprs[random.randint(0, len(self.ua_reprs) - 1)]
+        ua_repr = self.ua_reprs[random.randint(0, len(self.ua_reprs) - 1)]
         acc = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
         return {
-            'User-Agent': ua,
+            'User-Agent': ua_repr,
             'Accept': acc,
             'Accept-Language': 'en-US,en;q=0.5',
         }
@@ -82,12 +84,16 @@ class CompanyUnderline(object):
 
     @property
     def exch(self):
+        """Short name for exchange
+        """
         return getattr(self, 'exchange', None)
 
     def setup_exchange(self):
         """Set exchange based on known information
         """
         def set_exchange(self, attr):
+            """Set exchange for self
+            """
             if hasattr(self, attr):
                 cond = {attr: getattr(self, attr, '')}
                 match = resource_manager.find_exchange_by(**cond)

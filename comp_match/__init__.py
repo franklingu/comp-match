@@ -9,3 +9,8 @@ __ver_sub__ = 'dev0'
 __version__ = "%d.%d.%d%s" % (
     __ver_major__, __ver_minor__, __ver_patch__, __ver_sub__
 )
+
+from .google_finance import GoogleFinanceNameMatcher
+from .yahoo_finance import YahooFinanceNameMatcher
+from .open_calais import OpenCalaisNameMatcher
+from .helpers import match
