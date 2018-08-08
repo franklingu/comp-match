@@ -18,7 +18,7 @@
 
 ## Intro
 
-Given a company name, how to find its underline/stock symbol? By hand this does seem like a very difficult task, but what if we need to match a lof of them? In such case we need to find a simple and effective way to compare company names, match to stock symbols.
+Given a company name, how to find its underline/stock symbol? By hand this does not seem like a very difficult task, but what if we need to match a lof of them? In such case we need to find a simple and effective way to compare company names, match to stock symbols.
 
 ## Quick Start
 
@@ -87,17 +87,17 @@ TODO
 
 ## Roadmap
 
-[x] Get GoogleFinance, YahooFinance, OpenCalais matchers working
-[x] Add top level function to match company names to underlines directly
-[ ] Add more documentation
-[ ] Double check GoogleFinance and YahooFinance exchange mapping
-[ ] Improve performance with asyncio or threading
-[ ] Add msn finance matching
-[ ] Improve result matching and filtering with similary check, weight adjustment
-[ ] Add command line usage
-[ ] Add in memory caching
-[ ] Add redis / db caching
-[ ] Add Flask web app and json api
+- [x] Get GoogleFinance, YahooFinance, OpenCalais matchers working
+- [x] Add top level function to match company names to underlines directly
+- [ ] Add more documentation
+- [ ] Double check GoogleFinance and YahooFinance exchange mapping
+- [ ] Improve performance with asyncio or threading
+- [ ] Add msn finance matching
+- [ ] Improve result matching and filtering with similary check, weight adjustment
+- [ ] Add command line usage
+- [ ] Add in memory caching
+- [ ] Add redis / db caching
+- [ ] Add Flask web app and json api
 
 ## Contribution Guide
 
